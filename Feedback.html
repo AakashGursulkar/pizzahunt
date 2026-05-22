@@ -1,0 +1,324 @@
+<html>
+<head>
+<title> Pizza </title>
+
+<script language="javaScript" type="text/JavaScript">
+
+function echeck(str)
+{
+ var at="@"
+ var dot="."
+ var lat=str.indexOf(at)
+ var lstr=str.length
+ var ldot=str.indexOf(dot)
+
+	if(str.indexOf(at)==-1)
+	{
+	 alert("There should be atleast one\"@" ")
+	 return false
+	}
+
+	if(str.indexOf(at)==-1|| str.indexOf(at)==0)
+	{
+	 alert("@ should not be at first position.\n")
+	 return false
+	}
+
+	if(str.indexOf(at)==|str-1)
+	{
+	 alert("@ should not be at last position")
+	 return false
+	}
+
+	if(str.indexOf(dot)==0)
+	{
+	 alert("'.'should not be at first position")
+	 return false
+	}
+
+	if(str.indexOf(dot)==|str-1)
+	{
+	 alert("'.' should not be at last position")
+	 return false
+	}
+
+	if(str.indexOf("")!=-1)
+	{
+	 alert("Space is not allowed")
+	 return false
+	}
+ return true
+}
+
+
+function validateform()
+{
+ var fname11=document.feed.t1
+ var fname12=document.feed.t2
+ var fname13=document.feed.t3
+ var pt=document.feed.cn
+ var emailID=document.feed.t4
+ var feed=document.feed.t5
+ var d1=document.feed.day
+ var d2=document.feed.month
+ var d3=document.ffed.year
+
+	if(fname11.value=="")
+	{
+ 	 alert("Please Enter your First Name.")
+	 fname11.focus()
+	 return false
+	}
+
+	if (fname12.value=="")
+	{
+ 	 alert("Please Enter your Last Name.")
+	 fname12.focus()
+	 return false
+	}
+
+	if(fname13.value=="")
+	{
+	 alert("Please Enter your Postal Address.")
+	 fname13.focus()
+	 return false
+	}
+
+	if(emailID.value=="")
+ 	{
+	 alert("Please Enter your emailID")
+	 emailID.focus()
+	 return false
+	}
+
+	if(echeck(emailID.value)==false)
+	{
+ 	 emailID.focus()
+	 return false
+	}
+
+	if(pt.selectIndex==0)
+	{
+	 alert("Select City");
+	 pt.focus();
+	 return false
+	}
+
+	if(d1.select Index==0)
+	{
+	 alert("Select Day");
+	 d1.focus();
+ 	 return false
+	}
+
+	if(d2.select Index==0)
+ 	{
+	 alert("Select Month");
+	 d2.focus();
+	 return false
+	}
+
+	if(d3.select Index==0)
+ 	{
+	 alert("Select Year");
+	 d3.focus();
+	 return false
+	}
+
+	if(d1.index==0 || d2.value=="" || d3.value=="")
+	{
+	 alert("Please select your country")
+	 d1.focus()
+	 return false
+	}
+
+	if(feed.value=="")
+	{
+	 alert("Please Enter your suggestions.")
+	 feed.focus()
+ 	 return false
+	}
+ return true
+}
+
+
+</script>
+</head>
+<body bgcolor="EEA8A8">
+<p align="center"> 
+<font size="8">
+<b>PIZZA HUT </b>
+</font> </p>
+
+<marquee height="2%" width="100%" bgcolor="brown" behaviour=2 direction=2>
+Welcome to Pizza Hut </marquee>
+
+<table width="99%">
+<tr>
+<td width="35%">
+<font size="5%">
+<p> <a href="home.html"> <b> Home </b> </a> </p>
+<p> <a href="about us.html"> <b> About Us </b> </a> </p>
+<p> <a href="menu.html"> <b> Menu </b> </a> </p>
+<p> <a href="od1.html"> <b> Order </b> </a> </p>
+<p> <a href="contact.html"> <b> Contact </b> </a> </p>
+</font>
+
+<p> &nbsp;</p>
+<p> &nbsp;</p>
+<p> &nbsp;</p>
+<p> <br>
+</p>
+
+</td>
+<td>
+<form name="feed" method="post" on Submit="return validateform()" action="feedback.asp">
+
+<p align="center" class="imppoint"> (Fields with * mark are compulsory) </p>
+
+<p> Enter your first Name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;::
+<input type="text"name="t1" maxlength="20">* </p>
+
+<p> Enter your Last Name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;::
+<input type="text" name="t2" maxlength="20">* </p>
+
+<p> Enter your Postal Address:::
+<textarea name="t3" rows="3"> </textarea> </p>
+
+<p> Enter your EmailID &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;::
+<input type="text" name="t4" maxlength="50">* </p>
+
+<p> Enter your Country Name &nbsp;::
+<select name="city">
+<option value="Select City"> Select City </option>
+<option value="Ambajogai"> Ambajogai </option>
+<option value="Latur"> Latur </option> 
+<option value="Parali vai."> Parali vai. </option>
+<option value="Majalgaon"> Majalgaon </option>
+<option value="Beed"> Beed </option>
+<option value="Parbhani"> Parbhani </option>
+</select> * </p>
+
+<p> Enter your Date of Birth &nbsp; &nbsp; &nbsp; &nbsp;::
+<select name="day">
+<option> DD </option>
+<option value="01">  01  </option>
+<option value="02">  02  </option>
+<option value="03">  03  </option>
+<option value="04">  04  </option>
+<option value="05">  05  </option>
+<option value="06">  06  </option>
+<option value="07">  07  </option>
+<option value="08">  08  </option>
+<option value="09">  09  </option>
+<option value="10">  10  </option>
+<option value="11">  11  </option>
+<option value="12">  12  </option>
+<option value="13">  13  </option>
+<option value="14">  14  </option>
+<option value="15">  15  </option>
+<option value="16">  16  </option>
+<option value="17">  17  </option>
+<option value="18">  18  </option>
+<option value="19">  19  </option>
+<option value="20">  20  </option>
+<option value="21">  21  </option>
+<option value="22">  22  </option>
+<option value="23">  23  </option>
+<option value="24">  24  </option>
+<option value="25">  25  </option>
+<option value="26">  26  </option>
+<option value="27">  27  </option>
+<option value="28">  28  </option>
+<option value="29">  29  </option>
+<option value="30">  30  </option>
+<option value="31">  31  </option>
+</select> 
+
+
+<select name="month">
+<option> MM </option>
+<option value="JANUARY">  January   </option>
+<option value="FEBRUARY"> February  </option>
+<option value="MARCH">    March     </option>
+<option value="APRIL">    April     </option>
+<option value="MAY">      May       </option>
+<option value="JUNE">     June      </option>
+<option value="JULY">     July      </option>
+<option value="AUGUST">   August    </option>
+<option value="SEPTEMBER">September </option>
+<option value="OCTOBER">  October   </option>
+<option value="NOVEMBER"> November  </option>
+<option value="DECEMBER"> December  </option>
+</select>
+
+
+<select name="year">
+<option> YY </option>
+<option value="1950"> 1950 </option>
+<option value="1951"> 1951 </option>
+<option value="1952"> 1952 </option>
+<option value="1953"> 1953 </option>
+<option value="1954"> 1954 </option>
+<option value="1955"> 1955 </option>
+<option value="1956"> 1956 </option>
+<option value="1957"> 1957 </option>
+<option value="1958"> 1958 </option>
+<option value="1959"> 1959 </option>
+<option value="1960"> 1960 </option>
+<option value="1961"> 1961 </option>
+<option value="1962"> 1962 </option>
+<option value="1963"> 1963 </option>
+<option value="1964"> 1964 </option>
+<option value="1965"> 1965 </option>
+<option value="1966"> 1966 </option>
+<option value="1967"> 1967 </option>
+<option value="1968"> 1968 </option>
+<option value="1969"> 1969 </option>
+<option value="1970"> 1970 </option>
+<option value="1971"> 1971 </option>
+<option value="1972"> 1972 </option>
+<option value="1973"> 1973 </option>
+<option value="1974"> 1974 </option>
+<option value="1975"> 1975 </option>
+<option value="1976"> 1976 </option>
+<option value="1977"> 1977 </option>
+<option value="1978"> 1978 </option>
+<option value="1979"> 1979 </option>
+<option value="1980"> 1980 </option>
+<option value="1981"> 1981 </option>
+<option value="1982"> 1982 </option>
+<option value="1983"> 1983 </option>
+<option value="1984"> 1984 </option>
+<option value="1985"> 1985 </option>
+<option value="1986"> 1986 </option>
+<option value="1987"> 1987 </option>
+<option value="1988"> 1989 </option>
+<option value="1989"> 1990 </option>
+<option value="1990"> 1991 </option>
+<option value="1991"> 1992 </option>
+<option value="1992"> 1993 </option>
+<option value="1993"> 1994 </option>
+<option value="1995"> 1995 </option>
+</select>*
+
+&nbsp; &nbsp; &nbsp; </p>
+
+
+<p> Enter your response &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;::
+
+<textarea name="t5" rows="3"> </textarea>* </font>  </p>
+
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+<input type ="submit" name="Submit" value="Submit">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+<input type="reset" name="Reset" value="Reset">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </p>
+
+</td> 
+</tr>
+</table>
+</body>
+</html> 
